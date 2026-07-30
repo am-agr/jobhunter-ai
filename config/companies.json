@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Deloitte",
+    "platform": "workday",
+    "careers_url": "https://apply.deloitte.com/careers"
+  },
+  {
+    "name": "EY",
+    "platform": "phenom",
+    "careers_url": "https://careers.ey.com"
+  },
+  {
+    "name": "Accenture",
+    "platform": "custom",
+    "careers_url": "https://www.accenture.com/in-en/careers/jobsearch"
+  },
+  {
+    "name": "American Express",
+    "platform": "workday",
+    "careers_url": "https://aexp.eightfold.ai/careers"
+  }
+]
