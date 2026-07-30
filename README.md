@@ -1,2 +1,2 @@
-# jobhunter-ai
-To automate job search
+# JobHunter AI
+Starter project.
