@@ -1,28 +1,28 @@
-from src.utils.config_loader import load_all_configs
+from src.collectors.demo import DemoCollector
 
 
 def main():
-    config = load_all_configs()
 
-    print("=" * 50)
-    print("🚀 JobHunter AI")
-    print("=" * 50)
+    collector = DemoCollector()
 
-    print(f"\nCompanies Loaded : {len(config['companies'])}")
+    jobs = collector.collect()
 
-    print("\nSearch Profiles")
-    for profile in config["keywords"]:
-        print(f"  • {profile}")
+    print()
 
-    print("\nLocations")
-    for location in config["settings"]["locations"]:
-        print(f"  • {location}")
+    print("=" * 60)
 
-    print("\nExcluded Roles")
-    for role in config["settings"]["exclude"]:
-        print(f"  • {role}")
+    print(f"Collected {len(jobs)} jobs")
 
-    print("\n✅ Configuration Loaded Successfully")
+    print("=" * 60)
+
+    for job in jobs:
+
+        print()
+
+        print(job.company)
+        print(job.role)
+        print(job.location)
+        print(job.source)
 
 
 if __name__ == "__main__":
