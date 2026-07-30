@@ -1,28 +1,25 @@
-from src.collectors.demo import DemoCollector
+from src.search.serpapi import SerpApiSearch
 
 
 def main():
 
-    collector = DemoCollector()
+    search = SerpApiSearch()
 
-    jobs = collector.collect()
-
-    print()
-
-    print("=" * 60)
-
-    print(f"Collected {len(jobs)} jobs")
+    results = search.search(
+        'Strategy Consultant Delhi NCR'
+    )
 
     print("=" * 60)
 
-    for job in jobs:
+    print(f"Found {len(results)} results")
 
+    print("=" * 60)
+
+    for r in results:
+
+        print(r.title)
+        print(r.url)
         print()
-
-        print(job.company)
-        print(job.role)
-        print(job.location)
-        print(job.source)
 
 
 if __name__ == "__main__":
