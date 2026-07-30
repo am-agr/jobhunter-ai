@@ -22,4 +22,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run JobHunter
-        run: python main.py
+  env:
+    SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+  run: python main.py
